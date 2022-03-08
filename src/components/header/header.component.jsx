@@ -5,13 +5,13 @@ import { auth } from "../../firebase/firebase.utils";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { connect } from "react-redux";
 import CardIcon from "../card-item/card-item.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.components";
 const Header = ({ currentUser }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
         <Logo className="logo" />
       </Link>
-
       <div className="options">
         <Link className="option" to="/shop">
           SHOP
@@ -30,6 +30,7 @@ const Header = ({ currentUser }) => {
         )}
         <CardIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };
