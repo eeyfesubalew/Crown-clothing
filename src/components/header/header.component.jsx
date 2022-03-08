@@ -4,6 +4,7 @@ import "./header.style.scss";
 import { auth } from "../../firebase/firebase.utils";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { connect } from "react-redux";
+import CardIcon from "../card-item/card-item.component";
 const Header = ({ currentUser }) => {
   return (
     <div className="header">
@@ -27,6 +28,7 @@ const Header = ({ currentUser }) => {
             SIGN IN
           </Link>
         )}
+        <CardIcon />
       </div>
     </div>
   );
